@@ -127,7 +127,7 @@ void loop() {
         if (!rhino.charging) {
           rhino.xpos = -20 + round(5 * sin((float)rhino.contFrames * 0.2)) ;
           rhino.chargetime--;
-          if (rhino.chargetime == 0) {
+          if (rhino.chargetime <= 0) {
             rhino.charging = true;
             rhino.charge = random(30, 45);
           }
